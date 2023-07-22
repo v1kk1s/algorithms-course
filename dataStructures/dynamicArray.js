@@ -29,6 +29,7 @@ class DynamicArray {
   popBack () {
     if (!this.size) return;
 
+    // amortized time complexity O(1*)
     if(this.size < this.capacity % 4) {
       this.capacity = this.capacity % 2;
       const newArray = new Array(this.capacity);
