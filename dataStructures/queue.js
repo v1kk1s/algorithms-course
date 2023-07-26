@@ -10,6 +10,7 @@ export class Queue {
   constructor() {
     this.head = new Node();
     this.tail = new Node();
+    this.size = 0;
 
     this.head.next = this.tail;
     this.tail.prev = this.head;
@@ -24,6 +25,7 @@ export class Queue {
     node.prev = currentLast;
     node.next = this.tail;
     currentLast.next = node;
+    this.size += 1;
   };
   pop = () => {
     // removes from the beginning of the queue
@@ -33,6 +35,7 @@ export class Queue {
     const next = node.next;
     prev.next = next;
     next.prev = prev;
+    this.size -= 1;
     return node.value;
   };
 }

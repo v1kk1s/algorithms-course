@@ -14,15 +14,13 @@ const RecentCounter = function() {
 RecentCounter.prototype.ping = function(t) {
   const startTime = t - 3000;
   this.queue.push(t);
-  this.queueLength += 1;
 
   while (this.queue.head.next.value < startTime) {
     this.queue.pop();
-    this.queueLength -= 1;
   }
 
-  console.log(this.queueLength);
-  return this.queueLength;
+  console.log(this.queue.size);
+  return this.queue.size;
 };
 
 const obj = new RecentCounter()
