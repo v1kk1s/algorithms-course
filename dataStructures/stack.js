@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class Stack {
+export class Stack {
   constructor() {
     this.head = new Node();
     this.tail = new Node();
@@ -41,7 +41,7 @@ const stack = new Stack();
 stack.push(3);
 stack.push(4);
 stack.push(5);
-
-console.log(stack.pop(), 'pop');
-console.log(stack.pop(), 'pop');
-console.log(stack, 'stack');
+//
+// console.log(stack.pop(), 'pop');
+// console.log(stack.pop(), 'pop');
+// console.log(stack, 'stack');
