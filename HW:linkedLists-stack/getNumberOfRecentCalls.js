@@ -13,10 +13,10 @@ const RecentCounter = function() {
  */
 RecentCounter.prototype.ping = function(t) {
   const startTime = t - 3000;
-  this.queue.push(t);
+  this.queue.enqueue(t);
 
   while (this.queue.head.next.value < startTime) {
-    this.queue.pop();
+    this.queue.dequeue();
   }
 
   console.log(this.queue.size);

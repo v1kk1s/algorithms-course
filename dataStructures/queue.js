@@ -16,7 +16,7 @@ export class Queue {
     this.tail.prev = this.head;
   }
 
-  push = (value) => {
+  enqueue = (value) => {
     // adds to the end of the queue
     // [h] -> [currentLast] -> [N] -> [t]
     const node = new Node(value);
@@ -27,7 +27,7 @@ export class Queue {
     currentLast.next = node;
     this.size += 1;
   };
-  pop = () => {
+  dequeue = () => {
     // removes from the beginning of the queue
     // [h] -> [N] -> [] -> [t]
     const node = this.head.next;
@@ -41,9 +41,9 @@ export class Queue {
 }
 
 // const queue = new Queue();
-// queue.push(3);
-// queue.push(4);
-// queue.push(5);
+// queue.enqueue(3);
+// queue.enqueue(4);
+// queue.enqueue(5);
 //
-// console.log(queue.pop(), 'pop');
+// console.log(queue.dequeue(), 'dequeue');
 // console.log(queue, 'queue');
