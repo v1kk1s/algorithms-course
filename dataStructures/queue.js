@@ -6,6 +6,7 @@ class Node {
   }
 }
 
+// first in, first out, via Linked Lists
 export class Queue {
   constructor() {
     this.head = new Node();
